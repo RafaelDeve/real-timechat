@@ -1,1 +1,1 @@
-api: python core/manage.py runserver 
+web: cd core && python manage.py

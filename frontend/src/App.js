@@ -89,7 +89,7 @@ function App() {
   if (puerta) {
     return (
       <div className="bg-[#090524] h-screen w-screen flex flex-col items-center justify-center font-['Source Sans Pro']">
-        <label className="text-white w-[13rem] text-center text-2xl font-medium font-['Source Sans Pro'] pb-4">Ingresa tu nombre de usuario</label>
+        <label className="text-white w-[13rem] text-center text-2xl font-medium font-['Source Sans Pro'] pb-6">Ingresa tu nombre de usuario</label>
         <input type="text" onChange={(e) => captura_nombre(e.target)} placeholder="Type here" className="input text-white input-bordered w-full max-w-xs border-white bg-transparent" />
         <button className="text-white my-5 py-4 border-none px-[7.6rem] font-bold btn bg-[#3974FF] hover:bg-[#1b3779] active:bg-[#efefef] active:text-[#3974FF] font-['Source Sans Pro']"
           onClick={() => {

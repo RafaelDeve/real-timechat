@@ -5,7 +5,7 @@ import Cajitaazul from "./cajitaazul";
 import Cajitachat from "./cajitachat";
 import { Fade } from "react-awesome-reveal";
 
-const chatSocket = new WebSocket("ws://localhost:8000/ws/chat/1111/");
+const chatSocket = new WebSocket("ws://54.157.14.35:8000/ws/chat/1111/");
 
 function App() {
   const [puerta, setpuerta] = useState(true);

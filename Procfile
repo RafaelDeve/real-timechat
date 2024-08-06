@@ -1,1 +1,1 @@
-web: cd core && python manage.py
+web: cd core && python manage.py runserver

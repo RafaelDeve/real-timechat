@@ -5,15 +5,15 @@ import Cajitaazul from "./cajitaazul";
 import Cajitachat from "./cajitachat";
 import { Fade } from "react-awesome-reveal";
 
-const chatSocket = new WebSocket("ws://54.157.14.35:8000/ws/chat/1111/");
+const chatSocket = new WebSocket("ws://127.0.0.1:8000/ws/chat/1111/");
 
 function App() {
   const [puerta, setpuerta] = useState(true);
   const [nombre, setnombre] = useState("");
   const [msj, setmsj] = useState("");
   const [conversacion, setconversacion] = useState([]);
-  const chatEndRef = useRef(null); // Referencia al final de la conversación
-  const audioRef = useRef(null); // Referencia al objeto de audio principal
+  const chatEndRef = useRef(null); 
+  const audioRef = useRef(null); 
   const audioRefEntrada = useRef(null);
 
   function captura_nombre(e) {
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     audioRef.current = new Audio('/notification.mp3');
-    audioRefEntrada.current = new Audio('/entrada.mp3'); // Si tienes otro archivo de audio
+    audioRefEntrada.current = new Audio('/entrada.mp3'); 
   }, []);
   
   useEffect(() => {
@@ -74,15 +74,15 @@ function App() {
     };
   }, []);
 
-  // Efecto para desplazar la vista al último mensaje
+ 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [conversacion]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Evita el comportamiento por defecto del Enter, si es necesario
-      enviar(e); // Llama a la función enviar
+      e.preventDefault(); 
+      enviar(e); 
     }
   };
 
